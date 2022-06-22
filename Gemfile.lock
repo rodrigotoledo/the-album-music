@@ -83,6 +83,9 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    jwt (2.4.1)
+    jwt_sessions (2.7.2)
+      jwt (>= 2.2.3, < 3)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -110,10 +113,13 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
+    pg (1.4.0)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.3)
@@ -143,6 +149,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (4.6.0)
     reline (0.3.1)
       io-console (~> 0.5)
     sqlite3 (1.4.4)
@@ -162,8 +169,12 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  jwt_sessions
+  pg
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.3)
+  redis (~> 4.0)
   sqlite3 (~> 1.4)
   tzinfo-data
 
@@ -171,4 +182,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.16
+   2.2.32
