@@ -1,0 +1,10 @@
+development:
+  adapter: redis
+  url: redis://redis:6379
+
+test:
+  adapter: test
+
+production:
+  adapter: redis
+  url: redis://redistogo:52b3afe2d6591b1d10f5726e4641775c@crestfish.redistogo.com:10812/
