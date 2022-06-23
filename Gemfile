@@ -50,3 +50,4 @@ end
 group :production do
   gem "pg"
 end
+gem "faker", "~> 2.21"
