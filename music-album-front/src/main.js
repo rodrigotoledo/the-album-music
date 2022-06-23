@@ -5,14 +5,20 @@ import App from './App'
 import router from './router'
 import VueAxios from 'vue-axios'
 import { securedAxiosInstance, plainAxiosInstance } from './backend/axios'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import { faSignIn } from '@fortawesome/free-regular-svg-icons'
 import './main.css'
 
-Vue.config.productionTip = false
 
 Vue.use(VueAxios, {
   secured: securedAxiosInstance,
   plain: plainAxiosInstance
 })
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+// library.add(faSignIn)
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
